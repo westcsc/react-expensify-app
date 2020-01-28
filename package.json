@@ -21,6 +21,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "enzyme-adapter-react-16": "1.0.0",
     "express": "^5.0.0-alpha.7",
     "extract-text-webpack-plugin": "3.0.0",
     "moment": "2.18.1",
@@ -39,7 +40,6 @@
     "style-loader": "0.18.2",
     "uuid": "3.1.0",
     "validator": "8.0.0",
-    "webpack": "3.1.0",
     "webpack-cli": "^3.3.9"
   },
   "devDependencies": {
@@ -48,5 +48,6 @@
     "jest": "20.0.4",
     "react-test-renderer": "16.0.0",
     "webpack-dev-server": "2.5.1"
-  }
+  },
+  "repository": "git@github.com:westcsc/react-expensify-app.git"
 }
