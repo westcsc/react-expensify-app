@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import numeral from 'numeral';
 
 const ExpenseListItem = ({id, description, amount, createdAt}) => {
-
-    console.log(id, description, amount,createdAt);
-
     return (
         <div>
             <Link to={`/edit/${id}`}>

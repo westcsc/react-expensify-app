@@ -8,7 +8,9 @@ export const addExpense = (expense) => ({
 });
 
 export const startAddExpense = (expenseData = {}) => {
+    console.log("in StartAddExpenses")
     return (dispatch) => {
+        console.log("in startAddExpenses Inner Function")
         const {
             description = '', 
             note = '', 
@@ -37,3 +39,22 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 });
+
+// SET_EXPENSES
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses
+});
+
+export const startSetExpenses = () => {
+    return (dispatch) => {
+        return database.ref('expenses').once('value')
+        .then((snapShot) => {
+            const storeExpenses = [];
+            snapShot.forEach((childSnapshot) => {
+                storeExpenses.push({id:childSnapshot.key, ...childSnapshot.val() })
+            });
+            dispatch(setExpenses(storeExpenses));
+        })
+    }
+};
