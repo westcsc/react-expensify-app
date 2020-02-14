@@ -29,7 +29,7 @@ test('should handle EditExpense spies', () => {
     expect(editExpense).toHaveBeenLastCalledWith(expenses[2].id, expenses[2]);
 });
 
-test('should handle removeExpense spies', () => {
+test('should handle startRemoveExpense spies', () => {
     wrapper.find('button').simulate('click');
     expect(history.push).toHaveBeenLastCalledWith('/');
     expect(startRemoveExpense).toHaveBeenLastCalledWith({ id: expenses[2].id });
